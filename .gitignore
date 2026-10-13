@@ -1,0 +1,10 @@
+# Scratch / temporary files
+scratch/
+*.log
+.tempmediaStorage/
+.DS_Store
+Thumbs.db
+
+# IDE & Editor files
+.vscode/
+.idea/

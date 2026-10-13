@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahil Choudhary — Full-Stack Developer & AI Engineer</title>
+  <meta name="description" content="Shahil Choudhary — Full-Stack Developer & AI Engineer. Building scalable backends, RAG pipelines, and intelligent systems. New Delhi, India.">
+  <link rel="stylesheet" href="css/style.css?v=4.3">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>⚡</text></svg>">
+</head>
+<body>
+
+<!-- Top Scroll Progress Bar -->
+<div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+
+<!-- Ambient Cursor Glow Spotlight -->
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<!-- ====================================================================
+     NAVBAR
+     ==================================================================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>Shahil<span class="logo-dot">.</span><span class="logo-acc">dev</span><span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#contact"    class="nav-link nav-cta">Hire Me</a></li>
+      </ul>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+        <span id="theme-icon">🌙</span>
+      </button>
+
+      <!-- Hamburger -->
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ====================================================================
+     HERO
+     ==================================================================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <!-- Interactive Neural/Constellation Canvas -->
+    <canvas id="hero-particles" class="hero-canvas"></canvas>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-spotlight"></div>
+  </div>
+
+  <div class="container hero-content">
+    <!-- Left: Text -->
+    <div class="hero-text-col">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to full-time &amp; internship roles
+      </div>
+
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Shahil</span><br>
+        <span class="hero-typewriter-wrap">
+          <span class="typewriter-prefix">I engineer </span><span class="typewriter-word" id="typewriter-word">Full-Stack AI Apps</span><span class="typewriter-cursor">|</span>
+        </span>
+      </h1>
+
+      <p class="hero-desc">
+        I build scalable backends, intelligent AI pipelines, and end-to-end web applications. Based in New Delhi — engineering real-world solutions from idea to deployment.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Django</span>
+        <span class="tag">React.js</span>
+        <span class="tag">LangChain</span>
+        <span class="tag">RAG</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+        <button class="btn btn-secondary btn-open-vault" data-doc="resume_ai">🧠 AI Resume</button>
+        <button class="btn btn-secondary btn-open-vault" data-doc="resume_backend">⚙️ Backend Resume</button>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/shahil-choudhary-552a37276/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/Latiyan15" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="mailto:shahilch15@gmail.com" class="social-link email-smart-link" title="Send Email (shahilch15@gmail.com)" data-email="shahilch15@gmail.com">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </a>
+        <a href="https://wa.me/918588877135" target="_blank" rel="noopener noreferrer" class="social-link whatsapp-smart-link" title="WhatsApp: +91 8588877135" data-phone="+918588877135">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Avatar -->
+    <div class="hero-img-col">
+      <div class="hero-avatar-wrap">
+        <div class="avatar-glow-ring"></div>
+        <img src="assets/images/avatar_shahil.jpg" alt="Shahil Choudhary" class="hero-avatar">
+        <div class="avatar-stats-card card-1">
+          <span class="stat-icon">⭐</span>
+          <div><div class="stat-val">8.6 CGPA</div><div class="stat-label">GGSIPU</div></div>
+        </div>
+        <div class="avatar-stats-card card-2">
+          <span class="stat-icon">🏆</span>
+          <div><div class="stat-val">5+ Wins</div><div class="stat-label">Hackathons</div></div>
+        </div>
+        <div class="avatar-stats-card card-3">
+          <span class="stat-icon">🚀</span>
+          <div><div class="stat-val">4 Projects</div><div class="stat-label">Deployed</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue">
+    <span>Scroll</span>
+    <span class="scroll-arrow">↓</span>
+  </div>
+</section>
+
+<!-- ====================================================================
+     STATS BAR
+     ==================================================================== -->
+<div class="stats-bar" id="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-bar-item">
+      <div class="sbi-val counter" data-target="8.6" data-decimals="1">0.0</div>
+      <div class="sbi-label">CGPA · GGSIPU B.Tech CSE</div>
+    </div>
+    <div class="stat-bar-item">
+      <div class="sbi-val counter" data-target="4" data-suffix="+">0</div>
+      <div class="sbi-label">Production Projects Shipped</div>
+    </div>
+    <div class="stat-bar-item">
+      <div class="sbi-val counter" data-target="5" data-suffix="+">0</div>
+      <div class="sbi-label">Hackathon Podiums Won</div>
+    </div>
+    <div class="stat-bar-item">
+      <div class="sbi-val counter" data-target="500" data-suffix="+">0</div>
+      <div class="sbi-label">Engineers Mentored</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================================
+     PROJECTS
+     ==================================================================== -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Featured Work</div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-desc">Real-world applications — from AI career intelligence to transit routing systems and secure escrow platforms.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1: Mentra.AI — FEATURED -->
+      <div class="project-card featured">
+        <div class="project-img-wrap">
+          <img src="assets/images/stage_mentra_ai.jpg" alt="Mentra.AI — AI Career Platform">
+          <div class="project-overlay">
+            <a href="https://aimentra-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="overlay-btn">Live Demo ↗</a>
+            <a href="https://github.com/Latiyan15/Mentra.AI" target="_blank" rel="noopener noreferrer" class="overlay-btn overlay-btn-ghost">GitHub ↗</a>
+          </div>
+          <span class="project-badge">AI / Web</span>
+          <span class="badge-featured">⭐ Featured</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Mentra.AI</h3>
+          <p class="project-desc">
+            AI career intelligence platform that analyzes a user's skills against target job roles to generate personalized learning roadmaps, skill-gap reports, and AI-driven interview prep using RAG + Gemini.
+          </p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Gemini API</span><span>LangChain RAG</span>
+          </div>
+          <div class="project-links">
+            <a href="https://aimentra-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/Latiyan15/Mentra.AI" target="_blank" rel="noopener noreferrer" class="proj-link proj-link-ghost">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: RouteIQ -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="assets/images/stage_routeiq.jpg" alt="RouteIQ — AI Transit Planner">
+          <div class="project-overlay">
+            <a href="https://route-iq-delta.vercel.app" target="_blank" rel="noopener noreferrer" class="overlay-btn">Live Demo ↗</a>
+            <a href="https://github.com/Latiyan15/RouteIQ" target="_blank" rel="noopener noreferrer" class="overlay-btn overlay-btn-ghost">GitHub ↗</a>
+          </div>
+          <span class="project-badge">Maps / AI</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">RouteIQ</h3>
+          <p class="project-desc">
+            AI-powered transit planner integrating real-time GTFS feeds for live bus tracking, multi-modal routing, and smart commute optimization.
+          </p>
+          <div class="project-tags">
+            <span>React</span><span>Vite</span><span>Express</span><span>Leaflet</span><span>GTFS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://route-iq-delta.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/Latiyan15/RouteIQ" target="_blank" rel="noopener noreferrer" class="proj-link proj-link-ghost">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: WorkFlowX -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="assets/images/stage_workflowx.jpg" alt="WorkFlowX — Backend Architecture">
+          <div class="project-overlay">
+            <a href="https://github.com/Latiyan15/WorkFlowX" target="_blank" rel="noopener noreferrer" class="overlay-btn">View GitHub ↗</a>
+          </div>
+          <span class="project-badge">Backend</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">WorkFlowX</h3>
+          <p class="project-desc">
+            Production-grade project management backend with Django ORM, JWT auth, Redis caching, and Celery async task processing with full Docker containerization.
+          </p>
+          <div class="project-tags">
+            <span>Django</span><span>PostgreSQL</span><span>Redis</span><span>Celery</span><span>Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Latiyan15/WorkFlowX" target="_blank" rel="noopener noreferrer" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Earn By Way -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="assets/images/stage_marketplace.jpg" alt="Earn By Way — Escrow Marketplace">
+          <div class="project-overlay">
+            <a href="https://github.com/Latiyan15?tab=repositories" target="_blank" rel="noopener noreferrer" class="overlay-btn">GitHub Profile ↗</a>
+          </div>
+          <span class="project-badge badge-gold">Escrow / AI</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Earn By Way</h3>
+          <p class="project-desc">
+            AI-powered freelance marketplace with secure escrow architecture, milestone-based payment releases, and candidate matching — built during R&amp;D internship at MJCorp Asia.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Django</span><span>REST APIs</span><span>Escrow Engine</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Latiyan15?tab=repositories" target="_blank" rel="noopener noreferrer" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     SKILLS & TECHNICAL CAPABILITIES
+     ==================================================================== -->
+<!-- ====================================================================
+     SKILLS & EXPERTISE (MOCKUP ACCURATE WITH INTERACTIVE MODAL POPUP)
+     ==================================================================== -->
+<section class="section section-skills-cyber" id="skills">
+  <div class="container skills-cyber-container">
+
+    <!-- Header matching mockup -->
+    <div class="skills-cyber-header">
+      <div class="sch-left">
+        <div class="sch-tag">// 03</div>
+        <div class="sch-title-wrap">
+          <h2 class="sch-title">
+            <span class="sch-title-main">Skills &amp;</span>
+            <span class="sch-title-accent">Expertise</span>
+          </h2>
+          <div class="sch-divider" aria-hidden="true"></div>
+          <p class="sch-desc">
+            Tools, technologies and domains I work with to turn ideas into scalable, real-world products.
+          </p>
+        </div>
+      </div>
+
+      <div class="sch-right">
+        <button class="btn-skills-cyber-view" id="btn-view-all-skills" type="button">
+          <span>View all skills</span>
+          <span class="bscv-arrow">→</span>
+        </button>
+        <div class="skills-grid-dots" aria-hidden="true" title="Grid View">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6-Card Strip Matching Mockup -->
+    <div class="skills-cards-row" id="skills-cards-strip">
+
+      <!-- 01: Full-Stack Dev -->
+      <div class="skill-card-cyber sc-pink-theme" data-skill-id="01" role="button" tabindex="0" aria-label="Open Full-Stack Dev skill details">
+        <div class="scc-accent-corner"></div>
+        <div class="scc-top">
+          <div class="scc-icon-box scc-ib-pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <span class="scc-index">01</span>
+        </div>
+        <div class="scc-info">
+          <h3 class="scc-title">Full-Stack Dev</h3>
+          <p class="scc-sub">Building end-to-end web applications.</p>
+        </div>
+        <div class="scc-chips-wrap">
+          <div class="scc-chips-line">
+            <span class="scc-chip">React</span>
+            <span class="scc-chip">Next.js</span>
+          </div>
+          <div class="scc-chips-line">
+            <span class="scc-chip">Node.js</span>
+            <span class="scc-chip">Java</span>
+            <span class="scc-chip scc-chip-count">+2</span>
+          </div>
+        </div>
+        <div class="scc-bottom">
+          <div class="scc-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02: Databases & Data -->
+      <div class="skill-card-cyber sc-cyan-theme" data-skill-id="02" role="button" tabindex="0" aria-label="Open Databases & Data skill details">
+        <div class="scc-accent-corner"></div>
+        <div class="scc-top">
+          <div class="scc-icon-box scc-ib-cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+          </div>
+          <span class="scc-index">02</span>
+        </div>
+        <div class="scc-info">
+          <h3 class="scc-title">Databases &amp; Data</h3>
+          <p class="scc-sub">Designing efficient schemas &amp; data systems.</p>
+        </div>
+        <div class="scc-chips-wrap">
+          <div class="scc-chips-line">
+            <span class="scc-chip">PostgreSQL</span>
+            <span class="scc-chip">MongoDB</span>
+          </div>
+          <div class="scc-chips-line">
+            <span class="scc-chip">Supabase</span>
+            <span class="scc-chip">Redis</span>
+            <span class="scc-chip scc-chip-count">+1</span>
+          </div>
+        </div>
+        <div class="scc-bottom">
+          <div class="scc-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03: Backend & APIs -->
+      <div class="skill-card-cyber sc-purple-theme" data-skill-id="03" role="button" tabindex="0" aria-label="Open Backend & APIs skill details">
+        <div class="scc-accent-corner"></div>
+        <div class="scc-top">
+          <div class="scc-icon-box scc-ib-purple">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <span class="scc-index">03</span>
+        </div>
+        <div class="scc-info">
+          <h3 class="scc-title">Backend &amp; APIs</h3>
+          <p class="scc-sub">Scalable APIs, microservices &amp; async workflows.</p>
+        </div>
+        <div class="scc-chips-wrap">
+          <div class="scc-chips-line">
+            <span class="scc-chip">Django</span>
+            <span class="scc-chip">Express</span>
+          </div>
+          <div class="scc-chips-line">
+            <span class="scc-chip">REST APIs</span>
+            <span class="scc-chip">Celery</span>
+            <span class="scc-chip scc-chip-count">+1</span>
+          </div>
+        </div>
+        <div class="scc-bottom">
+          <div class="scc-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04: AI Integrations -->
+      <div class="skill-card-cyber sc-magenta-theme" data-skill-id="04" role="button" tabindex="0" aria-label="Open AI Integrations skill details">
+        <div class="scc-accent-corner"></div>
+        <div class="scc-top">
+          <div class="scc-icon-box scc-ib-magenta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"></path>
+              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"></path>
+            </svg>
+          </div>
+          <span class="scc-index">04</span>
+        </div>
+        <div class="scc-info">
+          <h3 class="scc-title">AI Integrations</h3>
+          <p class="scc-sub">LLMs, RAG pipelines &amp; intelligent agents.</p>
+        </div>
+        <div class="scc-chips-wrap">
+          <div class="scc-chips-line">
+            <span class="scc-chip">Gemini API</span>
+            <span class="scc-chip">OpenAI</span>
+          </div>
+          <div class="scc-chips-line">
+            <span class="scc-chip">LangChain</span>
+            <span class="scc-chip">Vector DBs</span>
+          </div>
+        </div>
+        <div class="scc-bottom">
+          <div class="scc-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05: Dev Tools & Cloud -->
+      <div class="skill-card-cyber sc-teal-theme" data-skill-id="05" role="button" tabindex="0" aria-label="Open Dev Tools & Cloud skill details">
+        <div class="scc-accent-corner"></div>
+        <div class="scc-top">
+          <div class="scc-icon-box scc-ib-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+            </svg>
+          </div>
+          <span class="scc-index">05</span>
+        </div>
+        <div class="scc-info">
+          <h3 class="scc-title">Dev Tools &amp; Cloud</h3>
+          <p class="scc-sub">Development, deployment and collaboration.</p>
+        </div>
+        <div class="scc-chips-wrap">
+          <div class="scc-chips-line">
+            <span class="scc-chip">Git</span>
+            <span class="scc-chip">Docker</span>
+          </div>
+          <div class="scc-chips-line">
+            <span class="scc-chip">Vercel</span>
+            <span class="scc-chip">Render</span>
+            <span class="scc-chip scc-chip-count">+1</span>
+          </div>
+        </div>
+        <div class="scc-bottom">
+          <div class="scc-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06: Security & Auth -->
+      <div class="skill-card-cyber sc-violet-theme" data-skill-id="06" role="button" tabindex="0" aria-label="Open Security & Auth skill details">
+        <div class="scc-accent-corner"></div>
+        <div class="scc-top">
+          <div class="scc-icon-box scc-ib-violet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <span class="scc-index">06</span>
+        </div>
+        <div class="scc-info">
+          <h3 class="scc-title">Security &amp; Auth</h3>
+          <p class="scc-sub">Implementing secure and reliable systems.</p>
+        </div>
+        <div class="scc-chips-wrap">
+          <div class="scc-chips-line">
+            <span class="scc-chip">JWT / RBAC</span>
+            <span class="scc-chip">API Security</span>
+          </div>
+          <div class="scc-chips-line">
+            <span class="scc-chip">Rate Limiting</span>
+            <span class="scc-chip">OWASP</span>
+          </div>
+        </div>
+        <div class="scc-bottom">
+          <div class="scc-arrow-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Active Research Banner -->
+    <div class="learning-banner">
+      <div class="learning-icon">⚡</div>
+      <div class="learning-text">
+        <strong>Active Focus &amp; Research:</strong> Architecting High-Throughput Distributed Microservices &amp; Multi-Agent LLM Reasoning Loops.
+      </div>
+      <div class="learning-badge">Q4 2026 ROADMAP</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     EXPERIENCE & ACHIEVEMENTS (STRUCTURED MULTI-TRACK)
+     ==================================================================== -->
+<section class="section exp-cyber-section" id="experience">
+  <div class="exp-cyber-bg">
+    <div class="exp-cyber-img" style="background-image: url('assets/images/cyberpunk_experience_bg.jpg');"></div>
+    <div class="exp-cyber-overlay"></div>
+    <div class="exp-cyber-grid"></div>
+  </div>
+  <div class="container exp-content-wrap">
+    <div class="section-header">
+      <div class="section-tag">Verified Milestones</div>
+      <h2 class="section-title">Experience &amp; Achievements</h2>
+      <p class="section-desc">Industry software engineering, national competitive hackathon podiums, and accredited academic distinctions.</p>
+    </div>
+
+    <!-- Structured Track Switcher (NO "All" dump) -->
+    <div class="exp-track-switcher" id="exp-track-switcher" role="tablist">
+      <button class="exp-track-btn active" data-track="hackathon" role="tab" aria-selected="true">
+        <span class="etb-icon">🏆</span>
+        <span class="etb-label">Hackathons &amp; Competitions</span>
+        <span class="etb-count">4</span>
+      </button>
+      <button class="exp-track-btn" data-track="internship" role="tab" aria-selected="false">
+        <span class="etb-icon">🏢</span>
+        <span class="etb-label">Work &amp; Internships</span>
+        <span class="etb-count">2</span>
+      </button>
+      <button class="exp-track-btn" data-track="academic" role="tab" aria-selected="false">
+        <span class="etb-icon">🎓</span>
+        <span class="etb-label">Education &amp; Credentials</span>
+        <span class="etb-count">3</span>
+      </button>
+    </div>
+
+    <!-- Track Panes Container -->
+    <div class="exp-panes-wrap">
+
+      <!-- ==========================================
+           TRACK 1: WORK & INTERNSHIPS
+           ========================================== -->
+      <div class="exp-track-pane" data-track-pane="internship">
+        <div class="internships-grid">
+
+          <!-- Role 1: MJCorp Asia -->
+          <div class="internship-card">
+            <div class="ic-header">
+              <div class="ic-org-badge">
+                <span class="ic-monogram">MJ</span>
+                <span class="ic-status-dot" title="Active"></span>
+              </div>
+              <div class="ic-header-text">
+                <div class="ic-meta-row">
+                  <span class="ic-tag tag-active">Active Role</span>
+                  <span class="ic-period">Jul 2026 – Present · Remote</span>
+                </div>
+                <h3 class="ic-company">MJCorp Asia Pvt Ltd</h3>
+                <div class="ic-role">R&amp;D Software Engineer Intern</div>
+              </div>
+            </div>
+
+            <div class="ic-body">
+              <p class="ic-summary">
+                Core engineer on <strong>Earn By Way</strong>, an AI-powered enterprise freelance marketplace safeguarded by an automated escrow protection framework.
+              </p>
+              <ul class="ic-bullets">
+                <li>Architected full financial milestone escrow release workflows with strict verification audit trails.</li>
+                <li>Designed AI candidate-matching algorithms matching corporate technical requirements with developer portfolios.</li>
+                <li>Mitigated deliverable disputes by automating milestone delivery verification metrics.</li>
+              </ul>
+              <div class="ic-tech-tags">
+                <span>Escrow Architecture</span>
+                <span>AI Matching Engine</span>
+                <span>Python</span>
+                <span>Django REST</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+              </div>
+            </div>
+
+            <div class="ic-footer">
+              <button class="btn btn-sm btn-primary btn-open-vault" data-doc="mjcorp" type="button">
+                📄 Open Official Offer Letter ↗
+              </button>
+            </div>
+          </div>
+
+          <!-- Role 2: Odymax Technologies -->
+          <div class="internship-card">
+            <div class="ic-header">
+              <div class="ic-org-badge odymax-badge">
+                <span class="ic-monogram">OD</span>
+              </div>
+              <div class="ic-header-text">
+                <div class="ic-meta-row">
+                  <span class="ic-tag tag-completed">Completed</span>
+                  <span class="ic-period">Jun 15 – Aug 15, 2026 · New Delhi</span>
+                </div>
+                <h3 class="ic-company">Odymax Technologies</h3>
+                <div class="ic-role">Python Backend Developer Intern</div>
+              </div>
+            </div>
+
+            <div class="ic-body">
+              <p class="ic-summary">
+                Delivered full-lifecycle backend software engineering covering RESTful APIs, relational data architecture, and server-side business logic.
+              </p>
+              <ul class="ic-bullets">
+                <li>Engineered clean, high-throughput REST APIs with strict input serialization and error boundaries.</li>
+                <li>Designed normalized PostgreSQL database schemas and optimized indexing to eliminate query latency.</li>
+                <li>Authored comprehensive automated unit test suites and received formal commendation for analytical rigor.</li>
+              </ul>
+              <div class="ic-tech-tags">
+                <span>Python Backend</span>
+                <span>REST APIs</span>
+                <span>Database Design</span>
+                <span>Unit Testing</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="ic-footer">
+              <button class="btn btn-sm btn-secondary btn-open-vault" data-doc="odymax" type="button">
+                📜 View Verified Certificate ↗
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TRACK 2: HACKATHONS & COMPETITIONS (MOCKUP DESIGN)
+           ========================================== -->
+      <div class="exp-track-pane active" data-track-pane="hackathon">
+        <div class="achieve-cyber-container">
+
+          <!-- 1. Showcase Header Matching Mockup -->
+          <div class="achieve-showcase-header">
+            <div class="ash-left">
+              <div class="ash-tag">// 04 //ACHIEVEMENTS</div>
+              <h2 class="ash-title">
+                <span class="ash-title-h1">HACKATHONS</span>
+                <span class="ash-title-h2">&amp; COMPETITIONS</span>
+              </h2>
+              <p class="ash-desc">
+                From late-night builds to real-world impact, these experiences have pushed me to think bigger, build faster, and collaborate with incredible people.
+              </p>
+            </div>
+            <div class="ash-right">
+              <div class="ash-trophy-card">
+                <!-- 3D Holographic Wireframe Trophy SVG -->
+                <svg class="ash-trophy-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="trophyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#00f0ff"/>
+                      <stop offset="50%" stop-color="#8b5cf6"/>
+                      <stop offset="100%" stop-color="#ff007f"/>
+                    </linearGradient>
+                    <linearGradient id="trophyGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#ff007f"/>
+                      <stop offset="100%" stop-color="#00f0ff"/>
+                    </linearGradient>
+                    <filter id="trophyGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3" result="blur"/>
+                      <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Wireframe Cup Body -->
+                  <g filter="url(#trophyGlowFilter)" stroke="url(#trophyGrad1)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Top Rim Ellipses -->
+                    <ellipse cx="80" cy="38" rx="42" ry="12" fill="none"/>
+                    <ellipse cx="80" cy="42" rx="38" ry="10" fill="none" opacity="0.6"/>
+                    <ellipse cx="80" cy="56" rx="34" ry="9" fill="none" opacity="0.7"/>
+                    <ellipse cx="80" cy="74" rx="26" ry="7" fill="none" opacity="0.8"/>
+                    <ellipse cx="80" cy="88" rx="14" ry="4" fill="none"/>
+
+                    <!-- Vertical Meridian Ribs -->
+                    <path d="M38 38 C42 68 64 88 80 88 C96 88 118 68 122 38"/>
+                    <path d="M52 44 C56 66 70 86 80 88 C90 86 104 66 108 44" opacity="0.6"/>
+                    <path d="M66 48 C68 64 74 84 80 88 C86 84 92 64 94 48" opacity="0.7"/>
+                    <line x1="80" y1="50" x2="80" y2="88" opacity="0.5"/>
+
+                    <!-- Left Handle Wireframe -->
+                    <path d="M38 42 C16 44 14 68 32 78 C44 84 56 80 62 76" fill="none" stroke="url(#trophyGrad2)" stroke-width="1.8"/>
+                    <path d="M42 46 C24 48 22 64 36 74 C44 78 52 76 56 72" fill="none" stroke="url(#trophyGrad2)" opacity="0.6"/>
+
+                    <!-- Right Handle Wireframe -->
+                    <path d="M122 42 C144 44 146 68 128 78 C116 84 104 80 98 76" fill="none" stroke="url(#trophyGrad2)" stroke-width="1.8"/>
+                    <path d="M118 46 C136 48 138 64 124 74 C116 78 108 76 104 72" fill="none" stroke="url(#trophyGrad2)" opacity="0.6"/>
+
+                    <!-- Stem / Column -->
+                    <path d="M74 88 L74 108 L86 108 L86 88 Z" fill="none"/>
+                    <line x1="80" y1="88" x2="80" y2="108" opacity="0.6"/>
+                    <ellipse cx="80" cy="108" rx="12" ry="3" fill="none"/>
+
+                    <!-- Stepped Polygonal Base -->
+                    <path d="M68 108 L60 120 L100 120 L92 108 Z" fill="none"/>
+                    <path d="M56 120 L48 132 L112 132 L104 120 Z" fill="none"/>
+                    <line x1="48" y1="132" x2="48" y2="138"/>
+                    <line x1="112" y1="132" x2="112" y2="138"/>
+                    <line x1="48" y1="138" x2="112" y2="138"/>
+                    <line x1="80" y1="120" x2="80" y2="138" opacity="0.5"/>
+                  </g>
+
+                  <!-- Glowing Center Star -->
+                  <polygon points="80,52 83,60 92,60 85,65 87,73 80,68 73,73 75,65 68,60 77,60" fill="url(#trophyGrad1)" opacity="0.95"/>
+                </svg>
+
+                <div class="ash-trophy-meta">
+                  <span>IDEAS</span>
+                  <span>CODE</span>
+                  <span>PEOPLE</span>
+                  <span>IMPACT</span>
+                  <span class="ash-arrows">&gt;&gt;&gt;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Stats Capsule Strip (4 cards) -->
+          <div class="achieve-stats-strip">
+            <div class="stat-capsule sc-card-1">
+              <div class="sc-icon-box sc-pink">
+                <span class="sc-icon-char">[&gt;_]</span>
+              </div>
+              <div class="sc-info">
+                <div class="sc-num counter" data-target="10" data-suffix="+">10+</div>
+                <div class="sc-lbl">HACKATHONS</div>
+              </div>
+            </div>
+
+            <div class="stat-capsule sc-card-2">
+              <div class="sc-icon-box sc-cyan">
+                <span class="sc-icon-char">★</span>
+              </div>
+              <div class="sc-info">
+                <div class="sc-num counter" data-target="3">3</div>
+                <div class="sc-lbl">WINS</div>
+              </div>
+            </div>
+
+            <div class="stat-capsule sc-card-3">
+              <div class="sc-icon-box sc-blue">
+                <svg class="sc-svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+              </div>
+              <div class="sc-info">
+                <div class="sc-num counter" data-target="5">5</div>
+                <div class="sc-lbl">FINALIST / TOP ROUNDS</div>
+              </div>
+            </div>
+
+            <div class="stat-capsule sc-card-4">
+              <div class="sc-icon-box sc-pink">
+                <span class="sc-icon-char">⚡</span>
+              </div>
+              <div class="sc-info">
+                <div class="sc-num counter" data-target="150" data-suffix="+">150+</div>
+                <div class="sc-lbl">TEAMS COMPETED AGAINST</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 2x2 Grid of Event Cards Matching Mockup -->
+          <div class="achieve-cards-grid">
+
+            <!-- Card 1: Neural.Net Hackathon -->
+            <div class="achieve-card ac-rank-champion">
+              <div class="ac-top-bar">
+                <div class="ac-pill ac-pill-champion">
+                  <span class="ac-pill-icon">🎖</span>
+                  <span class="ac-pill-text">CHAMPION</span>
+                </div>
+                <div class="ac-year">2026</div>
+              </div>
+              <div class="ac-split-body">
+                <div class="ac-left-content">
+                  <h3 class="ac-title">Neural.Net Hackathon</h3>
+                  <p class="ac-desc">
+                    Outperformed 150+ nationwide teams by engineering high-accuracy AI reasoning models and real-time query pipelines.
+                  </p>
+                  <div class="ac-tags-row">
+                    <span class="ac-tag">Neural Systems</span>
+                    <span class="ac-tag">AI Pipelines</span>
+                    <span class="ac-tag">IIT Hyderabad</span>
+                  </div>
+                  <button class="ac-action-arrow btn-open-vault" data-doc="resume_ai" title="View details" type="button" aria-label="View details">↗</button>
+                </div>
+                <div class="ac-right-thumb">
+                  <img src="assets/images/achieve_neural.jpg" alt="Neural.Net Hackathon cyber mountain landscape" class="ac-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: ARTPARK ProtoDash Challenge -->
+            <div class="achieve-card ac-rank-bronze">
+              <div class="ac-top-bar">
+                <div class="ac-pill ac-pill-bronze">
+                  <span class="ac-pill-icon">🥉</span>
+                  <span class="ac-pill-text">3RD PRIZE</span>
+                </div>
+                <div class="ac-year">2026</div>
+              </div>
+              <div class="ac-split-body">
+                <div class="ac-left-content">
+                  <h3 class="ac-title">ARTPARK ProtoDash Challenge</h3>
+                  <p class="ac-desc">
+                    Competed at India's premier deep-tech research institute and built a rapid autonomous AI prototype in 48 hours.
+                  </p>
+                  <div class="ac-tags-row">
+                    <span class="ac-tag">IISc Bangalore</span>
+                    <span class="ac-tag">Autonomous Prototype</span>
+                    <span class="ac-tag">48-hr Sprint</span>
+                  </div>
+                  <button class="ac-action-arrow btn-open-vault" data-doc="resume_ai" title="View details" type="button" aria-label="View details">↗</button>
+                </div>
+                <div class="ac-right-thumb">
+                  <img src="assets/images/achieve_artpark.jpg" alt="ARTPARK ProtoDash futuristic corridor portal" class="ac-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: RBI HaRBinger 2026 -->
+            <div class="achieve-card ac-rank-cyan">
+              <div class="ac-top-bar">
+                <div class="ac-pill ac-pill-cyan">
+                  <span class="ac-pill-icon">🎖</span>
+                  <span class="ac-pill-text">PHASE II NATIONAL FINALIST</span>
+                </div>
+                <div class="ac-year">2026</div>
+              </div>
+              <div class="ac-split-body">
+                <div class="ac-left-content">
+                  <h3 class="ac-title">RBI HaRBinger 2026</h3>
+                  <p class="ac-desc">
+                    Selected for Phase II of the Reserve Bank of India's flagship national innovation sprint.
+                  </p>
+                  <div class="ac-tags-row">
+                    <span class="ac-tag">Reserve Bank of India</span>
+                    <span class="ac-tag">FinTech Security</span>
+                    <span class="ac-tag">Fraud Mitigation</span>
+                  </div>
+                  <button class="ac-action-arrow btn-open-vault" data-doc="resume_ai" title="View details" type="button" aria-label="View details">↗</button>
+                </div>
+                <div class="ac-right-thumb">
+                  <img src="assets/images/achieve_rbi.jpg" alt="Reserve Bank of India glowing pillars" class="ac-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: ET Enterprise Hackathon -->
+            <div class="achieve-card ac-rank-magenta">
+              <div class="ac-top-bar">
+                <div class="ac-pill ac-pill-magenta">
+                  <span class="ac-pill-icon">🎖</span>
+                  <span class="ac-pill-text">NATIONAL SEMI-FINALIST</span>
+                </div>
+                <div class="ac-year">2025</div>
+              </div>
+              <div class="ac-split-body">
+                <div class="ac-left-content">
+                  <h3 class="ac-title">ET Enterprise Hackathon</h3>
+                  <p class="ac-desc">
+                    Engineered enterprise solutions addressing high-scale supply chain and workflow automation under strict multi-tiered judging.
+                  </p>
+                  <div class="ac-tags-row">
+                    <span class="ac-tag">Enterprise Scale</span>
+                    <span class="ac-tag">High-Concurrency</span>
+                    <span class="ac-tag">Workflow Engine</span>
+                  </div>
+                  <button class="ac-action-arrow btn-open-vault" data-doc="resume_backend" title="View details" type="button" aria-label="View details">↗</button>
+                </div>
+                <div class="ac-right-thumb">
+                  <img src="assets/images/achieve_et.jpg" alt="ET Enterprise Hackathon cyberpunk skyscrapers" class="ac-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 4. Center Bottom Button Matching Mockup -->
+          <div class="achieve-bottom-cta">
+            <button class="btn-achieve-view-all btn-open-vault" data-doc="resume_ai" type="button">
+              <span>VIEW ALL ACHIEVEMENTS</span>
+              <span class="bav-arrow">→</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TRACK 3: EDUCATION & CREDENTIALS
+           ========================================== -->
+      <div class="exp-track-pane" data-track-pane="academic">
+        <div class="academics-grid">
+
+          <!-- Degree -->
+          <div class="academic-card degree-card">
+            <div class="ac-header">
+              <span class="ac-badge badge-purple">🎓 Formal Degree</span>
+              <span class="ac-score-pill">⭐ 8.6 CGPA Distinction</span>
+            </div>
+            <h3 class="ac-title">B.Tech in Computer Science &amp; Engineering</h3>
+            <div class="ac-sub">Guru Gobind Singh Indraprastha University (GGSIPU) · New Delhi</div>
+            <div class="ac-period">2024 – 2028 (Undergraduate)</div>
+            <p class="ac-desc">
+              Strong core computer science foundation with consistently high academic performance. Deep theoretical and practical coursework in:
+            </p>
+            <div class="ac-tags">
+              <span>Data Structures &amp; Algorithms</span>
+              <span>Database Management (DBMS)</span>
+              <span>Operating Systems</span>
+              <span>Computer Networks</span>
+              <span>OOP Architecture</span>
+            </div>
+          </div>
+
+          <!-- IBM Certification -->
+          <div class="academic-card cert-card">
+            <div class="ac-header">
+              <span class="ac-badge badge-cyan">🎓 Industry Certification</span>
+              <span class="ac-verified-pill">✓ Verified Credential</span>
+            </div>
+            <h3 class="ac-title">IBM Python for Data Science &amp; AI</h3>
+            <div class="ac-sub">IBM Authorized via Coursera · ID: E7GDI1CBTVUI</div>
+            <div class="ac-period">Issued 2026 · Online Proctored</div>
+            <p class="ac-desc">
+              Rigorous credential covering Python data structures, Pandas/NumPy vectorized computing, REST API integration, and AI model workflows.
+            </p>
+            <div class="ac-tags">
+              <span>IBM Authorized</span>
+              <span>Python for AI</span>
+              <span>Data Pipelines</span>
+            </div>
+            <div class="ac-footer">
+              <button class="btn btn-sm btn-secondary btn-open-vault" data-doc="ibm" type="button">
+                📄 Verify in Vault ↗
+              </button>
+            </div>
+          </div>
+
+          <!-- Kaggle Credentials -->
+          <div class="academic-card cert-card">
+            <div class="ac-header">
+              <span class="ac-badge badge-gold">🎓 Kaggle Learn Credentials</span>
+              <span class="ac-verified-pill">✓ Dual Certification</span>
+            </div>
+            <h3 class="ac-title">Kaggle Machine Learning &amp; Pandas</h3>
+            <div class="ac-sub">Kaggle Learn Verified Competency Certificates</div>
+            <div class="ac-period">Earned 2026 · Applied Data Science</div>
+            <p class="ac-desc">
+              End-to-end ML pipelines: missing value imputation, categorical encoding, cross-validation, XGBoost ensemble gradient boosting, and advanced Pandas wrangling.
+            </p>
+            <div class="ac-tags">
+              <span>XGBoost</span>
+              <span>ML Pipelines</span>
+              <span>Pandas Wrangling</span>
+            </div>
+            <div class="ac-footer">
+              <button class="btn btn-sm btn-secondary btn-open-vault" data-doc="kaggle_ml" type="button">
+                📜 View Kaggle ML Cert ↗
+              </button>
+              <button class="btn btn-sm btn-ghost btn-open-vault" data-doc="kaggle_pandas" type="button">
+                📜 Kaggle Pandas Cert ↗
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     ABOUT
+     ==================================================================== -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-col">
+        <div class="about-img-frame">
+          <img src="assets/images/avatar_shahil.jpg" alt="Shahil Choudhary">
+          <div class="about-img-badge">✦ Available for Hire</div>
+        </div>
+        <div class="about-quick-stats">
+          <div class="quick-stat"><div class="qs-val counter" data-target="8.6" data-decimals="1">0.0</div><div class="qs-label">CGPA · GGSIPU</div></div>
+          <div class="quick-stat"><div class="qs-val counter" data-target="4" data-suffix="+">0</div><div class="qs-label">Projects Built</div></div>
+          <div class="quick-stat"><div class="qs-val counter" data-target="5" data-suffix="+">0</div><div class="qs-label">Hackathon Wins</div></div>
+          <div class="quick-stat"><div class="qs-val counter" data-target="500" data-suffix="+">0</div><div class="qs-label">Students Mentored</div></div>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title left">Shahil Choudhary</h2>
+        <div class="about-role-line">Full-Stack Developer &amp; AI Engineer · New Delhi, India</div>
+        <p class="about-bio">
+          I'm a driven software engineer who combines robust backend system engineering with modern AI applications. From architecting scalable relational backends using Django, Redis, and Celery to constructing RAG pipelines and autonomous agents with LangChain, I build clean software that solves genuine, high-stakes human challenges.
+        </p>
+        <p class="about-bio"><em>"Same person. Different dreams. Still building."</em></p>
+
+        <div class="about-details-grid">
+          <div class="about-detail"><span class="detail-label">Education</span><span class="detail-val">B.Tech CSE · GGSIPU (8.6 CGPA)</span></div>
+          <div class="about-detail"><span class="detail-label">Location</span><span class="detail-val">New Delhi, India</span></div>
+          <div class="about-detail"><span class="detail-label">Specialization</span><span class="detail-val">Full-Stack, Backend, AI/ML</span></div>
+          <div class="about-detail"><span class="detail-label">Status</span><span class="detail-val available-dot">Available Immediately</span></div>
+        </div>
+
+        <div class="about-certs">
+          <div class="about-certs-label">Verified Certifications</div>
+          <div class="about-certs-row">
+            <button class="cert-pill btn-open-vault" data-doc="ibm">🏅 IBM Python &amp; AI</button>
+            <button class="cert-pill btn-open-vault" data-doc="kaggle_ml">🏅 Kaggle Intermediate ML</button>
+            <button class="cert-pill btn-open-vault" data-doc="kaggle_pandas">🏅 Kaggle Pandas</button>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <button class="btn btn-primary btn-open-vault" data-doc="resume_ai">🧠 AI Resume</button>
+          <button class="btn btn-secondary btn-open-vault" data-doc="resume_backend">⚙️ Backend Resume</button>
+          <a href="#contact" class="btn btn-secondary">Get In Touch →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     CONTACT
+     ==================================================================== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Let's Connect</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-desc">Open to full-time roles, internships, and exciting engineering collaborations. Drop a message — I respond fast.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="contact-info-card">
+          <div class="availability-pill">
+            <span class="avail-dot"></span>
+            Available immediately · Full-time &amp; Intern
+          </div>
+          <p class="contact-pitch">
+            Whether you have a job opening, an interesting project to collaborate on, or just want to discuss AI architecture and distributed systems — my inbox is always open.
+          </p>
+          <div class="contact-channels">
+            <a href="mailto:shahilch15@gmail.com" class="contact-channel email-smart-link" data-email="shahilch15@gmail.com">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+              </div>
+              <div class="channel-text">
+                <div class="channel-label">Email (Click to Copy / Compose)</div>
+                <div class="channel-val">shahilch15@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/shahil-choudhary-552a37276/" target="_blank" rel="noopener noreferrer" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="channel-text">
+                <div class="channel-label">LinkedIn</div>
+                <div class="channel-val">linkedin.com/in/shahil-choudhary-552a37276</div>
+              </div>
+            </a>
+            <a href="https://github.com/Latiyan15" target="_blank" rel="noopener noreferrer" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </div>
+              <div class="channel-text">
+                <div class="channel-label">GitHub</div>
+                <div class="channel-val">github.com/Latiyan15</div>
+              </div>
+            </a>
+            <a href="tel:+918588877135" class="contact-channel whatsapp-smart-link" data-phone="+918588877135">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="channel-text">
+                <div class="channel-label">Contact / Phone</div>
+                <div class="channel-val">+91 8588877135</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Direct Resume Viewer inside Contact Section -->
+          <div class="contact-resume-vault">
+            <div class="crv-header">
+              <span class="crv-badge">HUD // CREDENTIALS</span>
+              <div class="crv-title">Verified Resumes (Interactive PDF Viewer)</div>
+            </div>
+            <p class="crv-desc">Choose between role-tailored resumes — view interactive PDF online or download directly:</p>
+            <div class="crv-actions">
+              <button class="btn-vault-card btn-open-vault" data-doc="resume_ai" type="button">
+                <span class="bvc-icon">🧠</span>
+                <div class="bvc-text">
+                  <strong>AI &amp; GenAI Resume</strong>
+                  <span>LangChain · RAG · Vision · Agents</span>
+                </div>
+                <span class="bvc-arrow">↗</span>
+              </button>
+              <button class="btn-vault-card btn-open-vault" data-doc="resume_backend" type="button">
+                <span class="bvc-icon">⚙️</span>
+                <div class="bvc-text">
+                  <strong>Backend &amp; Systems Resume</strong>
+                  <span>Django · APIs · Docker · Redis · Celery</span>
+                </div>
+                <span class="bvc-arrow">↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="Elena Vance" required autocomplete="name">
+            <span class="field-error-hint" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="name@company.com" required autocomplete="email">
+            <span class="field-error-hint" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-msg">Message</label>
+            <textarea id="contact-msg" class="form-input" rows="5" placeholder="Let's build something remarkable..." required></textarea>
+            <span class="field-error-hint" id="msg-error"></span>
+          </div>
+          <div class="form-actions-wrap">
+            <button type="submit" class="btn btn-primary btn-submit-message" id="form-submit-btn">
+              <span>Send Message</span>
+              <span class="btn-arrow-sym">→</span>
+            </button>
+            <button type="button" class="btn btn-secondary btn-copy-draft-direct" id="btn-copy-draft">
+              📋 Copy Draft
+            </button>
+          </div>
+          <div class="contact-form-hint">
+            <span class="cfh-dot"></span>
+            <span>Clicking <strong>Send Message</strong> copies your draft and opens instant dispatch options (Gmail Web &amp; Default Mail client).</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     FOOTER
+     ==================================================================== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <span class="logo-bracket">&lt;</span>Shahil<span class="logo-dot">.</span><span class="logo-acc">dev</span><span class="logo-bracket">/&gt;</span>
+    </div>
+    <p class="footer-copy">© 2026 Shahil Choudhary · New Delhi, India · Built with ❤️</p>
+    <div class="footer-links">
+      <a href="https://github.com/Latiyan15" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/shahil-choudhary-552a37276/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:shahilch15@gmail.com" class="email-smart-link" data-email="shahilch15@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================================================================
+     EMAIL / MESSAGE DISPATCH MODAL
+     ==================================================================== -->
+<div class="modal-backdrop" id="dispatch-modal" role="dialog" aria-modal="true" aria-labelledby="dispatch-title">
+  <div class="dispatch-window">
+    <div class="modal-header">
+      <div class="dw-badge-wrap">
+        <span class="dw-badge">✉️ DIRECT DISPATCH</span>
+        <h2 class="modal-title" id="dispatch-title">Message Draft Ready</h2>
+      </div>
+      <button class="modal-close" id="btn-close-dispatch" aria-label="Close">✕</button>
+    </div>
+    <div class="dispatch-body">
+      <div class="dispatch-status-alert">
+        <span class="dsa-icon">📋</span>
+        <div class="dsa-text">
+          <strong>Draft Copied to Clipboard!</strong>
+          <span>Formatted with your subject, credentials, and message content.</span>
+        </div>
+      </div>
+
+      <div class="dispatch-preview-block">
+        <div class="dpb-header">
+          <span class="dpb-label">Draft Preview (to: shahilch15@gmail.com)</span>
+          <button type="button" class="btn-copy-preview" id="btn-copy-preview-again">Copy Draft</button>
+        </div>
+        <pre class="dpb-content" id="dispatch-preview-content"></pre>
+      </div>
+
+      <div class="dispatch-options-grid">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="dispatch-opt-card doc-gmail" id="btn-opt-gmail">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </div>
+          <div class="doc-meta">
+            <strong>Open in Gmail Web ↗</strong>
+            <span>Recommended for Laptop / PC (Opens compose in new tab)</span>
+          </div>
+        </a>
+
+        <a href="#" class="dispatch-opt-card doc-mail" id="btn-opt-mailto">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div class="doc-meta">
+            <strong>Open Default Mail App ↗</strong>
+            <span>Recommended for Phone / Mobile (iOS / Android / Outlook)</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================================
+     TOAST
+     ==================================================================== -->
+<div class="toast" id="toast" role="alert">
+  <span class="toast-icon" id="toast-icon">✓</span>
+  <span id="toast-msg">Message sent!</span>
+</div>
+
+<!-- ====================================================================
+     CREDENTIAL VAULT MODAL
+     ==================================================================== -->
+<!-- ====================================================================
+     SKILL SET POPUP MODAL (EXPANDABLE DETAIL MODAL ON CARD TAP)
+     ==================================================================== -->
+<div class="modal-backdrop" id="skill-modal" role="dialog" aria-modal="true" aria-labelledby="sm-domain-title">
+  <div class="skill-popup-window">
+    <div class="modal-header sm-popup-header">
+      <div class="sm-header-meta">
+        <span class="sm-index-tag" id="sm-index-tag">DOMAIN // 01</span>
+        <div class="sm-title-row">
+          <div class="sm-icon-container" id="sm-icon-container"></div>
+          <div>
+            <h2 class="modal-title" id="sm-domain-title">Full-Stack Dev</h2>
+            <p class="modal-sub" id="sm-domain-sub">Building end-to-end web applications.</p>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close" id="btn-close-skill-modal" aria-label="Close modal">✕</button>
+    </div>
+
+    <!-- Quick Domain Switcher Tabs inside Modal -->
+    <div class="sm-domain-tabs" role="tablist" id="sm-domain-tabs">
+      <button class="sm-tab active" data-tab-domain="01">01 Full-Stack</button>
+      <button class="sm-tab" data-tab-domain="02">02 Databases</button>
+      <button class="sm-tab" data-tab-domain="03">03 Backend</button>
+      <button class="sm-tab" data-tab-domain="04">04 AI Integrations</button>
+      <button class="sm-tab" data-tab-domain="05">05 Dev Tools</button>
+      <button class="sm-tab" data-tab-domain="06">06 Security &amp; Auth</button>
+    </div>
+
+    <!-- Scrollable Detailed Skills List Content -->
+    <div class="sm-body-wrap" id="sm-body-wrap">
+      <!-- Populated dynamically via JS -->
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="vault-modal" role="dialog" aria-modal="true" aria-labelledby="vault-doc-title">
+  <div class="vault-window">
+    <div class="modal-header">
+      <div>
+        <h2 class="modal-title" id="vault-doc-title">Official Resume</h2>
+        <p class="modal-sub" id="vault-doc-sub">Shahil Choudhary · Full-Stack Developer &amp; AI Engineer</p>
+      </div>
+      <div class="modal-header-actions">
+        <a href="#" target="_blank" class="btn btn-ghost btn-sm" id="btn-vault-open-link">Open ↗</a>
+        <a href="#" download class="btn btn-ghost btn-sm" id="btn-vault-download-link">Download ↓</a>
+        <button class="modal-close" id="btn-close-vault" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="vault-tabs" role="tablist">
+      <button class="vault-tab active" data-doc="resume_ai" role="tab">🧠 AI Resume</button>
+      <button class="vault-tab" data-doc="resume_backend" role="tab">⚙️ Backend Resume</button>
+      <button class="vault-tab" data-doc="mjcorp" role="tab">🏢 MJCorp Offer</button>
+      <button class="vault-tab" data-doc="odymax" role="tab">🏢 Odymax Cert</button>
+      <button class="vault-tab" data-doc="ibm" role="tab">🎓 IBM Python</button>
+      <button class="vault-tab" data-doc="kaggle_ml" role="tab">🎓 Kaggle ML</button>
+      <button class="vault-tab" data-doc="kaggle_pandas" role="tab">🎓 Kaggle Pandas</button>
+    </div>
+    <div class="vault-frame-wrap" id="vault-frame-container"></div>
+  </div>
+</div>
+
+<!-- ====================================================================
+     BACK TO TOP (With Scroll Progress Ring)
+     ==================================================================== -->
+<button class="back-to-top" id="back-to-top" title="Back to top" aria-label="Back to top">
+  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+    <circle class="progress-ring-bg" cx="23" cy="23" r="19" stroke="var(--bg-border-h)" stroke-width="3" fill="none"/>
+    <circle class="progress-ring-circle" id="progress-circle" cx="23" cy="23" r="19" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" fill="none" stroke-dasharray="119.38" stroke-dashoffset="119.38"/>
+  </svg>
+  <span class="btt-icon">↑</span>
+</button>
+
+<script src="js/portfolio.js?v=4.3"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahil Choudhary - Resume</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1e293b;
+      background: #f8fafc;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 3rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 4px;
+    }
+    .resume-header {
+      text-align: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .resume-header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .resume-header .contact-row {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+    .resume-header .contact-row a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .resume-header .contact-row a:hover { text-decoration: underline; }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 0.25rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .item-block {
+      margin-bottom: 1rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.2rem;
+    }
+    .item-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-subtitle {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #3b82f6;
+    }
+    .item-date {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .item-bullets {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      font-size: 0.88rem;
+      color: #334155;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem;
+      font-size: 0.88rem;
+    }
+    .skills-row strong {
+      color: #0f172a;
+    }
+    .print-bar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #0f172a;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-back-portfolio {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .resume-container { box-shadow: none; padding: 0; }
+      .print-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-bar">
+    <a href="index.html" class="btn-back-portfolio">◄ Back to Arcade Portfolio</a>
+    <button class="btn-print" onclick="window.print()">🖨 Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-container">
+    <header class="resume-header">
+      <h1>Shahil Choudhary</h1>
+      <div class="contact-row">
+        <span>📍 New Delhi, India</span>
+        <span>📞 +91 8588877135</span>
+        <a href="mailto:shahilch15@gmail.com">shahilch15@gmail.com</a>
+        <a href="https://www.linkedin.com/in/shahil-choudhary-552a37276/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Latiyan15" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">GGSIPU (Guru Gobind Singh Indraprastha University)</div>
+          <div class="item-date">2024 – 2028</div>
+        </div>
+        <div class="item-subtitle">B.Tech — Computer Science & Engineering · 8.6 CGPA</div>
+      </div>
+    </section>
+
+    <!-- Experience (2 Internships) -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+      <!-- Internship 1 -->
+      <div class="item-block">
+        <div class="item-header">
+          <div>
+            <span class="item-title">MJCORP ASIA PVT LTD</span> — <span class="item-subtitle">R&D Intern</span>
+          </div>
+          <div class="item-date">Jul 2026 – Present | New Delhi, India</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Built <strong>Earn By Way</strong>, an AI-powered freelance marketplace with a secure escrow platform connecting enterprise clients and businesses with verified freelance talent.</li>
+          <li>Engineered milestone payment release pipeline, dispute resolution indicators, and automated candidate matching algorithms.</li>
+        </ul>
+      </div>
+
+      <!-- Internship 2 -->
+      <div class="item-block">
+        <div class="item-header">
+          <div>
+            <span class="item-title">ODYMAX TECHNOLOGIES</span> — <span class="item-subtitle">Python Backend Developer Intern</span>
+          </div>
+          <div class="item-date">Jun 2026 – Aug 2026 | New Delhi, India</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Contributed to the full software development lifecycle in the Software Development department.</li>
+          <li>Engineered REST APIs, database schemas, and robust backend business logic for production systems.</li>
+          <li>Executed unit testing, performance debugging, and comprehensive API documentation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">WorkFlowX — Enterprise Project Management Backend</div>
+          <div class="item-date">Django, DRF, PostgreSQL, Redis, Celery, Docker, Swagger</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Designed a relational backend architecture (User → Org → Project → Board → Task → Comment) with Django ORM migrations and DRF endpoints.</li>
+          <li>Implemented JWT authentication with refresh tokens, role-based permissions, and Django signals for workflow events.</li>
+          <li>Added Redis caching and Celery background jobs for asynchronous notifications; deployed with Docker CI/CD on Render/Railway.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">Mentra.AI — AI Career Intelligence Platform</div>
+          <div class="item-date">React, Node.js, Express, MongoDB, Gemini, LangChain, RAG</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Built an AI platform that analyzes skill gaps against target roles to generate personalized roadmaps and interview prep simulations.</li>
+          <li>Engineered RAG pipelines with embeddings and vector databases to ground Gemini and OpenAI responses in verified career datasets.</li>
+          <li>Orchestrated multi-step AI agents using LangChain for automated roadmap compilation.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">RouteIQ — AI-Powered Transit Planner</div>
+          <div class="item-date">React, Vite, Node.js, Express, Leaflet, GTFS, Gemini</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Integrated GTFS data and real-time feeds to power route planning, multi-modal alternative routes, and live bus tracking.</li>
+          <li>Implemented Server-Sent Events (SSE) for journey telemetry alerts, with Leaflet interactive mapping and Gemini AI travel advice.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications (3 Verified Courses) -->
+    <section>
+      <h2 class="section-title">Verified Certifications</h2>
+      <ul class="item-bullets">
+        <li><strong>IBM / Coursera:</strong> Python for Data Science, AI & Development (Authorized by IBM, ID: E7GDI1CBTVUI)</li>
+        <li><strong>Kaggle:</strong> Intermediate Machine Learning (Completed April 2026)</li>
+        <li><strong>Kaggle:</strong> Pandas for Data Analysis (Completed January 2026)</li>
+        <li><strong>Udemy:</strong> Python Django Full-Stack Web Development</li>
+      </ul>
+    </section>
+
+    <!-- Achievements & Leadership -->
+    <section>
+      <h2 class="section-title">Achievements & Leadership</h2>
+      <ul class="item-bullets">
+        <li><strong>Co-Lead, AI/ML:</strong> GeekRoom Community</li>
+        <li><strong>3rd Place:</strong> ARTPARK ProtoDash Challenge, IISc Bangalore</li>
+        <li><strong>Winner:</strong> Neural.Net, IIIT Hyderabad</li>
+        <li><strong>Semi-Finalist:</strong> ET Hackathon</li>
+        <li><strong>Phase II / Finalist:</strong> RBI HaRBInger 2026</li>
+      </ul>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-row"><strong>Languages:</strong> Python, Java, C++, JavaScript (ES6+), SQL</div>
+        <div class="skills-row"><strong>Backend:</strong> Django, Django REST Framework, Node.js, Express, REST APIs, JWT, ORM</div>
+        <div class="skills-row"><strong>Databases:</strong> PostgreSQL, MongoDB, SQLite, Redis</div>
+        <div class="skills-row"><strong>Infrastructure:</strong> Docker, Celery, Git, GitHub CI/CD, Swagger/OpenAPI, Render, Railway</div>
+        <div class="skills-row"><strong>AI / ML:</strong> LangChain, RAG, Gemini, OpenAI, PyTorch, Scikit-Learn, Vector DBs</div>
+        <div class="skills-row"><strong>Frontend:</strong> React, Vite, Tailwind CSS, Leaflet, HTML5/CSS3</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
