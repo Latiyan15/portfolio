@@ -3438,71 +3438,137 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: #94a3b8;
 }
 
-/* 6-Card Row */
+/* ============================================================
+   3×2 BALANCED BENTO GRID — SKILLS & EXPERTISE
+   ============================================================ */
 .skills-cards-row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 44px;
 }
 
 .skill-card-cyber {
-  border-radius: 20px;
-  padding: 24px 20px 20px;
+  border-radius: 22px;
+  padding: 28px 24px 22px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   position: relative;
   cursor: pointer;
   user-select: none;
   overflow: hidden;
-  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
-  background: rgba(9, 15, 36, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(165deg, rgba(13, 20, 48, 0.9) 0%, rgba(7, 11, 28, 0.96) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1.5px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+/* Ambient Radial Backplate Glow */
+.skill-card-cyber::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle 280px at 0% 0%, var(--card-glow-soft), transparent 75%);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
 [data-theme="light"] .skill-card-cyber {
   background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 6px 24px -4px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .skill-card-cyber::before {
+  background: radial-gradient(circle 280px at 0% 0%, var(--card-glow-soft), transparent 75%);
+  opacity: 0.35;
 }
 
 .skill-card-cyber:hover {
   transform: translateY(-8px);
 }
 
+.skill-card-cyber:hover::before {
+  opacity: 1;
+}
+
 [data-theme="dark"] .skill-card-cyber:hover {
   border-color: var(--card-color);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 32px var(--card-glow);
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.8), 0 0 32px -4px var(--card-glow);
 }
 
 [data-theme="light"] .skill-card-cyber:hover {
   border-color: var(--card-color);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 42px -8px var(--card-glow-soft), 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-/* Card Themes */
-.sc-pink-theme { --card-color: #ec4899; --card-glow: rgba(236, 72, 153, 0.4); }
-.sc-cyan-theme { --card-color: #00f0ff; --card-glow: rgba(0, 240, 255, 0.4); }
-.sc-purple-theme { --card-color: #a855f7; --card-glow: rgba(168, 85, 247, 0.4); }
-.sc-magenta-theme { --card-color: #ff007f; --card-glow: rgba(255, 0, 127, 0.4); }
-.sc-teal-theme { --card-color: #14b8a6; --card-glow: rgba(20, 184, 166, 0.4); }
-.sc-violet-theme { --card-color: #8b5cf6; --card-glow: rgba(139, 92, 246, 0.4); }
+/* Card Themes with Rich Gradients & Transparencies */
+.sc-pink-theme {
+  --card-color: #ec4899;
+  --card-color-end: #f43f5e;
+  --card-glow: rgba(236, 72, 153, 0.38);
+  --card-glow-soft: rgba(236, 72, 153, 0.12);
+  --card-badge-bg: rgba(236, 72, 153, 0.1);
+}
+.sc-cyan-theme {
+  --card-color: #00f0ff;
+  --card-color-end: #0284c7;
+  --card-glow: rgba(0, 240, 255, 0.38);
+  --card-glow-soft: rgba(0, 240, 255, 0.12);
+  --card-badge-bg: rgba(0, 240, 255, 0.1);
+}
+.sc-purple-theme {
+  --card-color: #a855f7;
+  --card-color-end: #7c3aed;
+  --card-glow: rgba(168, 85, 247, 0.38);
+  --card-glow-soft: rgba(168, 85, 247, 0.12);
+  --card-badge-bg: rgba(168, 85, 247, 0.1);
+}
+.sc-magenta-theme {
+  --card-color: #ff007f;
+  --card-color-end: #d946ef;
+  --card-glow: rgba(255, 0, 127, 0.38);
+  --card-glow-soft: rgba(255, 0, 127, 0.12);
+  --card-badge-bg: rgba(255, 0, 127, 0.1);
+}
+.sc-teal-theme {
+  --card-color: #14b8a6;
+  --card-color-end: #10b981;
+  --card-glow: rgba(20, 184, 166, 0.38);
+  --card-glow-soft: rgba(20, 184, 166, 0.12);
+  --card-badge-bg: rgba(20, 184, 166, 0.1);
+}
+.sc-violet-theme {
+  --card-color: #8b5cf6;
+  --card-color-end: #6366f1;
+  --card-glow: rgba(139, 92, 246, 0.38);
+  --card-glow-soft: rgba(139, 92, 246, 0.12);
+  --card-badge-bg: rgba(139, 92, 246, 0.1);
+}
 
+/* Sleek Glowing Top Accent Notch */
 .scc-accent-corner {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 48px;
-  height: 4px;
-  border-radius: 0 0 4px 0;
-  background: var(--card-color);
-  box-shadow: 0 0 12px var(--card-glow);
+  left: 28px;
+  width: 80px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, var(--card-color), var(--card-color-end, transparent));
+  box-shadow: 0 0 16px var(--card-color);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.skill-card-cyber:hover .scc-accent-corner {
+  width: 140px;
+}
+
+/* Card Top Row */
 .scc-top {
   display: flex;
   align-items: center;
@@ -3510,56 +3576,69 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .scc-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.skill-card-cyber:hover .scc-icon-box {
+  transform: scale(1.06);
 }
 
 .scc-icon-box svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
-.scc-ib-pink { background: rgba(236, 72, 153, 0.16); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.4); }
-.scc-ib-cyan { background: rgba(0, 240, 255, 0.16); color: #00f0ff; border: 1px solid rgba(0, 240, 255, 0.4); }
-.scc-ib-purple { background: rgba(168, 85, 247, 0.16); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.4); }
-.scc-ib-magenta { background: rgba(255, 0, 127, 0.16); color: #ff007f; border: 1px solid rgba(255, 0, 127, 0.4); }
-.scc-ib-teal { background: rgba(20, 184, 166, 0.16); color: #14b8a6; border: 1px solid rgba(20, 184, 166, 0.4); }
-.scc-ib-violet { background: rgba(139, 92, 246, 0.16); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.4); }
+.scc-ib-pink { background: rgba(236, 72, 153, 0.14); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.35); }
+.scc-ib-cyan { background: rgba(0, 240, 255, 0.14); color: #00f0ff; border: 1px solid rgba(0, 240, 255, 0.35); }
+.scc-ib-purple { background: rgba(168, 85, 247, 0.14); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.35); }
+.scc-ib-magenta { background: rgba(255, 0, 127, 0.14); color: #ff007f; border: 1px solid rgba(255, 0, 127, 0.35); }
+.scc-ib-teal { background: rgba(20, 184, 166, 0.14); color: #14b8a6; border: 1px solid rgba(20, 184, 166, 0.35); }
+.scc-ib-violet { background: rgba(139, 92, 246, 0.14); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.35); }
 
-[data-theme="light"] .scc-ib-pink { background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.3); }
-[data-theme="light"] .scc-ib-cyan { background: rgba(2, 132, 199, 0.1); color: #0284c7; border-color: rgba(2, 132, 199, 0.3); }
-[data-theme="light"] .scc-ib-purple { background: rgba(147, 51, 234, 0.1); border-color: rgba(147, 51, 234, 0.3); }
-[data-theme="light"] .scc-ib-magenta { background: rgba(219, 39, 119, 0.1); border-color: rgba(219, 39, 119, 0.3); }
-[data-theme="light"] .scc-ib-teal { background: rgba(13, 148, 136, 0.1); color: #0d9488; border-color: rgba(13, 148, 136, 0.3); }
-[data-theme="light"] .scc-ib-violet { background: rgba(124, 58, 237, 0.1); border-color: rgba(124, 58, 237, 0.3); }
+[data-theme="light"] .scc-ib-pink { background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.25); }
+[data-theme="light"] .scc-ib-cyan { background: rgba(2, 132, 199, 0.1); color: #0284c7; border-color: rgba(2, 132, 199, 0.25); }
+[data-theme="light"] .scc-ib-purple { background: rgba(147, 51, 234, 0.1); border-color: rgba(147, 51, 234, 0.25); }
+[data-theme="light"] .scc-ib-magenta { background: rgba(219, 39, 119, 0.1); border-color: rgba(219, 39, 119, 0.25); }
+[data-theme="light"] .scc-ib-teal { background: rgba(13, 148, 136, 0.1); color: #0d9488; border-color: rgba(13, 148, 136, 0.25); }
+[data-theme="light"] .scc-ib-violet { background: rgba(124, 58, 237, 0.1); border-color: rgba(124, 58, 237, 0.25); }
 
+/* Index Pill Tag */
 .scc-index {
   font-family: 'Fira Code', monospace;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--card-color);
+  background: var(--card-badge-bg);
+  border: 1px solid var(--card-glow-soft);
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
 }
 
 [data-theme="light"] .scc-index {
-  color: #94a3b8;
+  background: var(--card-badge-bg);
+  border-color: var(--card-glow-soft);
 }
 
+/* Card Info */
 .scc-info {
   display: flex;
   flex-direction: column;
 }
 
 .scc-title {
-  font-size: 1.12rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #ffffff;
-  letter-spacing: -0.01em;
-  margin-bottom: 5px;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
   line-height: 1.25;
 }
 
@@ -3568,10 +3647,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .scc-sub {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: #94a3cc;
-  line-height: 1.45;
-  min-height: 38px;
+  line-height: 1.55;
+  min-height: 42px;
   margin: 0;
 }
 
@@ -3579,31 +3658,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: #64748b;
 }
 
-/* Chips inside card */
+/* Chips inside Bento card */
 .scc-chips-wrap {
   display: flex;
-  flex-direction: column;
-  gap: 7px;
-  margin-top: 4px;
-}
-
-.scc-chips-line {
-  display: flex;
-  gap: 6px;
   flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
 }
 
 .scc-chip {
-  font-size: 0.73rem;
+  font-size: 0.78rem;
   font-family: 'Fira Code', monospace;
   font-weight: 600;
-  padding: 4px 9px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #e2e8f0;
   white-space: nowrap;
   transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
 }
 
 [data-theme="light"] .scc-chip {
@@ -3613,40 +3689,65 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .skill-card-cyber:hover .scc-chip {
-  border-color: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="light"] .skill-card-cyber:hover .scc-chip {
   border-color: #cbd5e1;
+  background: #f1f5f9;
 }
 
 .scc-chip-count {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--card-badge-bg);
   color: var(--card-color);
-  font-weight: 800;
+  border: 1px solid var(--card-glow);
+  font-weight: 700;
 }
 
 [data-theme="light"] .scc-chip-count {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--card-badge-bg);
+  border-color: var(--card-glow);
 }
 
-/* Card bottom arrow */
+/* Card Bottom Action Bar */
 .scc-bottom {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   margin-top: auto;
-  padding-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="light"] .scc-bottom {
+  border-top: 1px solid #f1f5f9;
+}
+
+.scc-explore-hint {
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: 'Fira Code', monospace;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.skill-card-cyber:hover .scc-explore-hint {
+  color: var(--card-color);
 }
 
 .scc-arrow-circle {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--card-color);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -3657,13 +3758,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 [data-theme="light"] .scc-arrow-circle {
-  background: #f1f5f9;
+  background: #f8fafc;
   border-color: #e2e8f0;
 }
 
 .skill-card-cyber:hover .scc-arrow-circle {
   background: var(--card-color);
   color: #ffffff;
+  border-color: var(--card-color);
   transform: translateX(4px);
   box-shadow: 0 0 16px var(--card-glow);
 }
@@ -3913,25 +4015,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 600;
 }
 
-/* Responsive Grid for Skills */
-@media (max-width: 1400px) {
-  .skills-cards-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-}
-
-@media (max-width: 900px) {
+/* Responsive Grid for Skills (3×2 Bento Grid) */
+@media (max-width: 1024px) {
   .skills-cards-row {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 20px;
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 640px) {
   .skills-cards-row {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
   }
   .skills-cyber-header {
     flex-direction: column;
